@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PET-SHOP</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- TailwindCSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Styles -->
+    <style>
+      .adlam-font {
+        font-family: "ADLaM Display", serif;
+      }
+
+      .sora-font {
+        font-family: "Sora", serif;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header section -->
+    <header>
+      <!-- navbar -->
+      <nav
+        class="bg-[#FFF9F4] py-3 shadow-md sora-font border-b border-black md:border-none"
+      >
+        <div class="flex justify-between items-center md:container mx-auto pr-4 md:px-4">
+          <!-- Logo -->
+          <div class="flex items-center space-x-2">
+            <img
+              src="./c1-assets/logo-header.png"
+              alt="Logo"
+              class="ml-2 md:ml-0"
+            />
+            <h3 class="hidden md:block">
+              <span class="text-lg font-semibold"
+                >Browse<span class="text-[#FFDC26]">4</span>Pets</span
+              >
+            </h3>
+          </div>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex space-x-6">
+            <a href="#" class="hover:text-yellow-500">Find a pet</a>
+            <a href="#" class="hover:text-yellow-500">Breeds</a>
+            <a href="#" class="hover:text-yellow-500">Contact us</a>
+          </div>
+
+          <!-- Icons and Buttons (Hidden on Mobile) -->
+          <div class="hidden md:flex items-center space-x-4">
+            <button class="">
+              <!-- Search Icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"
+                />
+              </svg>
+            </button>
+            <button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                />
+              </svg>
+            </button>
+            <button
+              class="border border-[#FFDC26] px-3 py-1 rounded-md hover:bg-[#FFDC26] hover:text-white transition"
+            >
+              Login
+            </button>
+            <button
+              class="bg-[#FFDC26] px-4 py-1 rounded-md hover:text-white transition"
+            >
+              Register
+            </button>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button id="menu-btn" class="mr-2 md:hidden text-2xl">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+      <!-- hero section -->
+      <section
+        class="h-[440px] md:h-screen md:container mx-auto px-4 my-10 md:my-20 relative"
+      >
+        <!-- Content Box -->
+        <div
+          class="max-w-lg bg-white bg-opacity-0 md:bg-opacity-70 rounded-lg space-y-6 pt-6 pb-6 pr-6 z-10 relative"
+        >
+          <h1
+            class="text-3xl md:text-4xl font-bold text-gray-900 leading-tight adlam-font mt-4"
+          >
+            Pamper Your Pet,<br />
+            Because They Deserve <br />
+            the Best
+          </h1>
+          <p class="mt-4 text-gray-700 sora-font">
+            Discover a world of treats, toys, and essentials handpicked for your
+            furry friends. Shop now and make tails wag with joy!
+          </p>
+          <button
+            class="bg-[#FFDC26] px-4 py-1 rounded-md hover:text-white transition sora-font animate-bounce"
+          >
+            Find a pet
+          </button>
+        </div>
+
+        <!-- Background Image Container -->
+        <div class="absolute top-56 md:top-0 inset-0 -z-10">
+          <img
+            src="./c1-assets/cat-big.png"
+            alt="Pet Image"
+            class="w-[430px] md:w-full h-[200px] md:h-full object-cover"
+          />
+        </div>
+      </section>
+    </header>
+
+    <!-- main section -->
+    <main>
+      <!-- Categories -->
+      <section class="md:container mx-auto px-4 my-24">
+        <h1 class="font-bold adlam-font text-3xl pb-4 ">
+          Browse By Categories
+        </h1>
+        <!-- cards section -->
+        <div
+          class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 py-8 pl-1"
+        >
+          <!-- Card-1 -->
+          <div
+            class="box-content border-0 p-4 rounded-md bg-[#FFDC26] bg-opacity-50 text-center"
+          >
+            <div class="flex items-center justify-center">
+              <img
+                src="./c1-assets/dog-cartoon.png"
+                alt="Dog"
+                class="p-7 bg-white rounded-full"
+              />
+            </div>
+            <div>
+              <h2 class="font-bold text-sm text-center pt-1 adlam-font">Dog</h2>
+              <h2 class="text-sm text-center pt-1 sora-font">3 items</h2>
+            </div>
+          </div>
+          <!-- Card-2 -->
+          <div
+            class="box-content border-0 p-4 rounded-md bg-[#FFDC26] bg-opacity-50 text-center"
+          >
+            <div class="flex items-center justify-center">
+              <img
+                src="./c1-assets/fish-cartoon.png"
+                alt="Fish"
+                class="p-7 bg-white rounded-full"
+              />
+            </div>
+            <div>
+              <h2 class="font-bold text-sm text-center pt-1 adlam-font">Fish</h2>
+              <h2 class="text-sm text-center pt-1 sora-font">3 items</h2>
+            </div>
+          </div>
+          <!-- Card-3 -->
+          <div
+            class="box-content border-0 p-4 rounded-md bg-[#FFDC26] bg-opacity-50 text-center"
+          >
+            <div class="flex items-center justify-center">
+              <img
+                src="./c1-assets/cat-cartoon.png"
+                alt="Cat"
+                class="p-7 bg-white rounded-full"
+              />
+            </div>
+            <div>
+              <h2 class="font-bold text-sm text-center pt-1 adlam-font">Cat</h2>
+              <h2 class="text-sm text-center pt-1 sora-font">3 items</h2>
+            </div>
+          </div>
+          <!-- Card-4 -->
+          <div
+            class="box-content border-0 p-4 rounded-md bg-[#FFDC26] bg-opacity-50 text-center"
+          >
+            <div class="flex items-center justify-center">
+              <img
+                src="./c1-assets/bird-cartoon.png"
+                alt="Birds"
+                class="p-7 bg-white rounded-full"
+              />
+            </div>
+            <div>
+              <h2 class="font-bold text-sm text-center pt-1 adlam-font">Birds</h2>
+              <h2 class="text-sm text-center pt-1 sora-font">3 items</h2>
+            </div>
+          </div>
+          <!-- Card-5 -->
+          <div
+            class="box-content border-0 p-4 rounded-md bg-[#FFDC26] bg-opacity-50 text-center"
+          >
+            <div class="flex items-center justify-center">
+              <img
+                src="./c1-assets/mouse-cartoon.png"
+                alt="Small Pet"
+                class="p-7 bg-white rounded-full"
+              />
+            </div>
+            <div>
+              <h2 class="font-bold text-sm text-center pt-3 adlam-font">Small pet</h2>
+              <h2 class="text-sm text-center pt-1 sora-font">3 items</h2>
+            </div>
+          </div>
+          <!-- Card-6 -->
+          <div
+            class="box-content border-0 p-4 rounded-md bg-[#FFDC26] bg-opacity-50 text-center"
+          >
+            <div class="flex items-center justify-center">
+              <img
+                src="./c1-assets/rabbit-cartoon.png"
+                alt="Rabbit"
+                class="p-7 bg-white rounded-full"
+              />
+            </div>
+            <div>
+              <h2 class="font-bold text-sm text-center pt-1 adlam-font">Rabbit</h2>
+              <h2 class="text-sm text-center pt-1 sora-font">3 items</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Trending Product -->
+      <section class="bg-[#FFF9F4] py-10 my-24">
+        <div class="container mx-auto px-4">
+          <h1
+            class="font-bold adlam-font text-3xl pb-8 text-left"
+          >
+            Trending Pet Products
+          </h1>
+
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-6 items-stretch">
+            <!-- Featured Product -->
+            <div
+              class="bg-yellow-200 p-6 rounded-xl flex flex-col justify-between items-center text-left w-full md:col-span-1"
+            >
+              <div>
+                <h3 class="text-lg font-bold mb-2 adlam-font">T-Shirt For Dogs</h3>
+                <p class="text-gray-600 mb-4 sora-font">
+                  Discover a world of treats, toys, and essentials handpicked
+                  for your pet.
+                </p>
+                <button
+                  class="bg-white px-4 py-2 rounded-lg font-semibold shadow-md hover:bg-gray-100 sora-font"
+                >
+                  Shop Now
+                </button>
+              </div>
+              <img
+                src="./c1-assets/cute-pet-mid.png"
+                alt="Dog"
+                class="mt-4 w-32"
+              />
+            </div>
+
+            <!-- Product Cards Container -->
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:col-span-3">
+              <div
+                class="bg-white rounded-xl shadow-md p-4 flex items-center space-x-4 border border-gray-200 h-32"
+              >
+                <div
+                  class="w-20 h-20 flex items-center justify-center bg-[#fef3ec] rounded-lg"
+                >
+                  <img
+                    src="./c1-assets/dog-cartoon.png"
+                    alt="Dog Icon"
+                    class="w-14"
+                  />
+                </div>
+                <div>
+                  <div class="flex items-center space-x-1">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/128/1828/1828884.png"
+                      alt="Star Icon"
+                      class="w-5"
+                    />
+                    <span class="text-lg font-medium sora-font">4.5</span>
+                  </div>
+                  <h2 class="text-xl font-semibold sora-font">Pet Bed</h2>
+                  <p class="text-lg font-bold text-gray-700 sora-font">$39.99</p>
+                </div>
+              </div>
+              <div
+                class="bg-white rounded-xl shadow-md p-4 flex items-center space-x-4 border border-gray-200 h-32"
+              >
+                <div
+                  class="w-20 h-20 flex items-center justify-center bg-[#fef3ec] rounded-lg"
+                >
+                  <img
+                    src="./c1-assets/fish-cartoon.png"
+                    alt="Dog Icon"
+                    class="w-14"
+                  />
+                </div>
+                <div>
+                  <div class="flex items-center space-x-1">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/128/1828/1828884.png"
+                      alt="Star Icon"
+                      class="w-5"
+                    />
+                    <span class="text-lg font-medium sora-font">4.5</span>
+                  </div>
+                  <h2 class="text-xl font-semibold sora-font">Pet Bed</h2>
+                  <p class="text-lg font-bold text-gray-700 sora-font">$39.99</p>
+                </div>
+              </div>
+              <div
+                class="bg-white rounded-xl shadow-md p-4 flex items-center space-x-4 border border-gray-200 h-32"
+              >
+                <div
+                  class="w-20 h-20 flex items-center justify-center bg-[#fef3ec] rounded-lg"
+                >
+                  <img
+                    src="./c1-assets/bird-cartoon.png"
+                    alt="Dog Icon"
+                    class="w-14"
+                  />
+                </div>
+                <div>
+                  <div class="flex items-center space-x-1">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/128/1828/1828884.png"
+                      alt="Star Icon"
+                      class="w-5"
+                    />
+                    <span class="text-lg font-medium sora-font">4.5</span>
+                  </div>
+                  <h2 class="text-xl font-semibold sora-font">Pet Bed</h2>
+                  <p class="text-lg font-bold text-gray-700 sora-font">$39.99</p>
+                </div>
+              </div>
+
+              <div
+                class="bg-white rounded-xl shadow-md p-4 flex items-center space-x-4 border border-gray-200 h-32"
+              >
+                <div
+                  class="w-20 h-20 flex items-center justify-center bg-[#fef3ec] rounded-lg"
+                >
+                  <img
+                    src="./c1-assets/rabbit-cartoon.png"
+                    alt="Dog Icon"
+                    class="w-14"
+                  />
+                </div>
+                <div>
+                  <div class="flex items-center space-x-1">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/128/1828/1828884.png"
+                      alt="Star Icon"
+                      class="w-5"
+                    />
+                    <span class="text-lg font-medium sora-font">4.5</span>
+                  </div>
+                  <h2 class="text-xl font-semibold sora-font">Pet Bed</h2>
+                  <p class="text-lg font-bold text-gray-700 sora-font">$39.99</p>
+                </div>
+              </div>
+
+              <div
+                class="bg-white rounded-xl shadow-md p-4 flex items-center space-x-4 border border-gray-200 h-32"
+              >
+                <div
+                  class="w-20 h-20 flex items-center justify-center bg-[#fef3ec] rounded-lg"
+                >
+                  <img
+                    src="./c1-assets/bird-cartoon.png"
+                    alt="Dog Icon"
+                    class="w-14"
+                  />
+                </div>
+                <div>
+                  <div class="flex items-center space-x-1">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/128/1828/1828884.png"
+                      alt="Star Icon"
+                      class="w-5"
+                    />
+                    <span class="text-lg font-medium sora-font">4.5</span>
+                  </div>
+                  <h2 class="text-xl font-semibold sora-font">Pet Bed</h2>
+                  <p class="text-lg font-bold text-gray-700 sora-font">$39.99</p>
+                </div>
+              </div>
+
+              <div
+                class="bg-white rounded-xl shadow-md p-4 flex items-center space-x-4 border border-gray-200 h-32"
+              >
+                <div
+                  class="w-20 h-20 flex items-center justify-center bg-[#fef3ec] rounded-lg"
+                >
+                  <img
+                    src="./c1-assets/pet-couch.png"
+                    alt="Dog Icon"
+                    class="w-14"
+                  />
+                </div>
+                <div>
+                  <div class="flex items-center space-x-1">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/128/1828/1828884.png"
+                      alt="Star Icon"
+                      class="w-5"
+                    />
+                    <span class="text-lg font-medium sora-font">4.5</span>
+                  </div>
+                  <h2 class="text-xl font-semibold sora-font">Pet Bed</h2>
+                  <p class="text-lg font-bold text-gray-700 sora-font">$39.99</p>
+                </div>
+              </div>
+
+              <div
+                class="bg-white rounded-xl shadow-md p-4 flex items-center space-x-4 border border-gray-200 h-32"
+              >
+                <div
+                  class="w-20 h-20 flex items-center justify-center bg-[#fef3ec] rounded-lg"
+                >
+                  <img
+                    src="./c1-assets/fish-cartoon.png"
+                    alt="Dog Icon"
+                    class="w-14"
+                  />
+                </div>
+                <div>
+                  <div class="flex items-center space-x-1">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/128/1828/1828884.png"
+                      alt="Star Icon"
+                      class="w-5"
+                    />
+                    <span class="text-lg font-medium sora-font">4.5</span>
+                  </div>
+                  <h2 class="text-xl font-semibold sora-font">Pet Bed</h2>
+                  <p class="text-lg font-bold text-gray-700 sora-font">$39.99</p>
+                </div>
+              </div>
+
+              <div
+                class="bg-white rounded-xl shadow-md p-4 flex items-center space-x-4 border border-gray-200 h-32"
+              >
+                <div
+                  class="w-20 h-20 flex items-center justify-center bg-[#fef3ec] rounded-lg"
+                >
+                  <img
+                    src="./c1-assets/pet-couch.png"
+                    alt="Dog Icon"
+                    class="w-14"
+                  />
+                </div>
+                <div>
+                  <div class="flex items-center space-x-1">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/128/1828/1828884.png"
+                      alt="Star Icon"
+                      class="w-5"
+                    />
+                    <span class="text-lg font-medium sora-font">4.5</span>
+                  </div>
+                  <h2 class="text-xl font-semibold sora-font">Pet Bed</h2>
+                  <p class="text-lg font-bold text-gray-700 sora-font">$39.99</p>
+                </div>
+              </div>
+
+              <div
+                class="bg-white rounded-xl shadow-md p-4  items-center space-x-4 border border-gray-200 h-32 hidden md:inline-flex"
+              >
+                <div
+                  class="w-20 h-20 flex items-center justify-center bg-[#fef3ec] rounded-lg"
+                >
+                  <img
+                    src="./c1-assets/rabbit-cartoon.png"
+                    alt="Dog Icon"
+                    class="w-14"
+                  />
+                </div>
+                <div>
+                  <div class="flex items-center space-x-1">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/128/1828/1828884.png"
+                      alt="Star Icon"
+                      class="w-5"
+                    />
+                    <span class="text-lg font-medium sora-font">4.5</span>
+                  </div>
+                  <h2 class="text-xl font-semibold sora-font">Pet Bed</h2>
+                  <p class="text-lg font-bold text-gray-700 sora-font">$39.99</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Everyday Low Price -->
+      <section class="md:container mx-auto px-4 my-24">
+        <h1 class="font-bold adlam-font text-3xl pb-12 m-2 md:m-0">
+          Everyday Low Price
+        </h1>
+        <div class="flex flex-col md:flex-row">
+          <div
+            class="bg-gradient-to-r from-[#F8CCFB] to-[#ACD2FD] flex justify-start items-start md:justify-center md:items-center rounded-md m-3 md:m-0 md:mr-3 md:w-3/4"
+          >
+            <div class="p-4">
+              <p class="font-semibold text-black sora-font hidden md:block">
+                Under Price
+              </p>
+              <h3 class="font-bold text-black adlam-font text-2xl">
+                Pet Grooming Mitt
+              </h3>
+              <p class="text-white adlam-font font-bold hidden md:block">
+                (Easy Hair Removal)
+              </p>
+              <h3 class="font-bold text-white md:text-black adlam-font text-4xl">$7.99</h3>
+            </div>
+            <div>
+              <img src="./c1-assets/cute-dog-mid.png" alt="Pet Grooming Mitt" />
+            </div>
+          </div>
+          <div
+            class="bg-gradient-to-r from-[#FFF9F4] to-[#F9DF8A] flex justify-start items-start rounded-md m-3 md:m-0"
+          >
+            <div class="p-4">
+              <h3 class="font-bold text-black adlam-font text-2xl">
+                T-Shirt for Dogs
+              </h3>
+              <h3 class="text-[#FFDC26] text-4xl font-bold adlam-font">$7.99</h3>
+            </div>
+            <div>
+              <img
+                src="./c1-assets/cute-pet-small.png"
+                alt="T-Shirt for Dogs"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FQA -->
+      <section class="my-24">
+        <h1
+            class="font-bold adlam-font text-3xl pb-8 text-left md:container mx-auto px-4"
+          >
+          Frequently Asked Questions
+          </h1>
+        <div class="hero">
+          <div class="hero-content flex-col lg:flex-row">
+            <img
+              src="./c1-assets/pexels-pixabay-45201-removebg-preview.png"
+              class="w-full rounded-lg shadow-2xl" />
+            <div class="space-y-7 sora-font">
+              <div class="collapse collapse-arrow border border-blue-100 ">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-xl font-semibold">What types of pets do you sell?</div>
+                <div class="collapse-content text-[#111111] opacity-70">
+                  <p>We offer a variety of pets, including dogs, cats, birds, rabbits, and fish. We also provide pet accessories, food, and grooming supplies to keep your pets happy and healthy.</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow border border-blue-100 ">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-xl font-semibold">Can I pre-book a specific breed or pet?</div>
+                <div class="collapse-content text-[#111111] opacity-70"">
+                  <p>Yes! If you’re looking for a particular breed or species that is currently unavailable, you can place a pre-order with us. We will notify you as soon as your desired pet becomes available. You can also request updates about new arrivals.</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow border border-blue-100 ">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-semibold">What are your pet shop’s delivery and shipping policies?</div>
+                <div class="collapse-content text-[#111111] opacity-70"">
+                  <p>We offer fast and secure delivery for pet food, accessories, and supplies. Delivery times depend on your location. For live pets, we provide safe and comfortable transportation within specific areas to ensure the pet's well-being. Contact our support team for more details on shipping options. </p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow border border-blue-100">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-semibold">What payment methods do you accept?</div>
+                <div class="collapse-content text-[#111111] opacity-70"">
+                  <p>We accept credit/debit cards, mobile payments, and cash on delivery (COD). Secure online payment options are also available for a hassle-free shopping experience.</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow border border-blue-100">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-semibold">Can I return or exchange pet products?</div>
+                <div class="collapse-content text-[#111111] opacity-70"">
+                  <p>Yes, we have a return and exchange policy for unused products within a specific period. Please check our <strong>Return Policy</strong> page for details or contact our support team. </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- newsletter -->
+    <section class="relative">
+      <section
+        class="w-10/12 mx-auto absolute bottom-96 md:bottom-48 left-8 md:left-32"
+      >
+        <div class="md:container mx-auto bg-[#FFF9F4] rounded-md mt-32">
+          <div
+            class="flex justify-center items-center flex-col lg:flex-row gap-4"
+          >
+            <img
+              src="./c1-assets/cute-pet-mid.png"
+              alt="Cute Pet"
+              class="w-full max-w-xs"
+            />
+            <div class="text-center md:text-left">
+              <h1 class="text-3xl font-bold adlam-font">Get Pawsome News!</h1>
+              <p class="py-6 px-2 md:px-0 sora-font">
+                Exclusive training tips, ticks, product deals and more.
+              </p>
+              <input
+                type="email"
+                placeholder="Enter email...."
+                class="input input-bordered w-full max-w-xs sora-font"
+              />
+              <br /><br />
+              <button
+                class="bg-[#FFDC26] px-4 py-1 rounded-md hover:text-white transition sora-font animate-bounce"
+              >
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- footer section -->
+      <footer
+        class="footer bg-[#FFDC26] bg-opacity-50 text-black sora-font mt-[320px] md:mt-80 pt-[350px] md:pt-52 p-10"
+      >
+        <aside>
+          <div class="flex items-center space-x-2">
+            <img
+              src="./c1-assets/logo-footer.png"
+              alt="Logo"
+              class="ml-0"
+            />
+            <h3>
+              <span class="text-lg font-semibold sora-font"
+                >Browse<span class="text-[#FFDC26]">4</span>Pets</span
+              >
+            </h3>
+          </div>
+          <p class="sora-font">
+            Discover a world of treats, toys, and <br />
+            essentials handpicked for your furry <br />
+            friends
+          </p>
+        </aside>
+        <nav class="md:pt-10">
+          <a class="link link-hover sora-font">Find a pet</a>
+          <a class="link link-hover sora-font">Breeds</a>
+          <a class="link link-hover sora-font">Contact us</a>
+        </nav>
+        <nav class="md:pt-16">
+          <h6 class=" sora-font">Follow Us</h6>
+          <div class="grid grid-flow-col gap-4">
+            <a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                class="fill-current"
+              >
+                <path
+                  d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
+                ></path>
+              </svg>
+            </a>
+            <a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                class="fill-current"
+              >
+                <path
+                  d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+                ></path>
+              </svg>
+            </a>
+            <a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                class="fill-current"
+              >
+                <path
+                  d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"
+                ></path>
+              </svg>
+            </a>
+            
+            
+          </div>
+        </nav>
+      </footer>
+    </section>
+  </body>
+</html>
